@@ -98,3 +98,13 @@ main {
 .scorecard--scoreText {
     margin: 0;
 }
+
+@media (max-width: 800px) {
+    .dice-container {
+        gap: 10px;
+    }
+
+    .roll-dice {
+        margin-bottom: 25px;
+    }
+}
