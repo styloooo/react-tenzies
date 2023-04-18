@@ -9,7 +9,7 @@ function App() {
   const [dice, setDice] = useState(allNewDice())
   const [tenzies, setTenzies] = useState(false)
   const [numRolls, setNumRolls] = useState(0)
-  const [highScore, setHighScore] = useState(JSON.parse(localStorage.getItem("highScore")) || 0)
+  const [highScore, setHighScore] = useState(JSON.parse(localStorage.getItem("react-tenzies-highScore")) || 0)
   const [windowDimensions, setWindowDimensions] = useState([window.innerWidth, window.innerHeight])
 
   // Tenzies Win Condition
@@ -28,7 +28,7 @@ function App() {
   }, [window.innerWidth, window.innerHeight])
 
   useEffect(function() {
-    localStorage.setItem("highScore", JSON.stringify(highScore))
+    localStorage.setItem("react-tenzies-highScore", JSON.stringify(highScore))
   })
 
   function generateNewDie() {
